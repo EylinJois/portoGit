@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
 import { Mail } from "lucide-react";
 import { Linkedin } from "lucide-react";
-import { ExternalLink } from "lucide-react";
+
 
 export default function Home() {
   return (
-    <div className="mx-auto min-h-screen bg-gradient-to-br from-zinc-100 to-zinc-300 dark:from-[#0C2C47] dark:to-zinc-900 font-sans flex flex-col">
-      <main className="w-full max-w-4xl mx-auto relative flex-grow items-center">
+    <div className="overflow-x-hidden mx-auto min-h-screen bg-gradient-to-br from-zinc-100 to-zinc-300 dark:from-[#0C2C47] dark:to-zinc-900 font-sans flex flex-col max-w-full">
+      <main className="w-full max-w-full mx-auto relative flex-grow items-center">
         {/* Floating blurred background circles */}
-        <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-[#ABCBCA] dark:bg-[#ABCBCA]/50 blur-3xl" />
-        <div className="absolute top-40 -right-40 h-72 w-72 rounded-full bg-[#0C2C47] dark:bg-[#ABCBCA]/50 opacity-50 blur-3xl" />
+        <div className="absolute -top-[2vh] -left-[2vw] h-72 w-72 rounded-full bg-[#ABCBCA] dark:bg-[#ABCBCA]/50 blur-3xl animate-pulse" />
+        <div className="absolute top-[12vh] right-[-4vw] h-50 w-50 rounded-full bg-[#0C2C47]/50 dark:bg-[#ABCBCA]/50 blur-3xl animate-pulse" />
 
-        <header className="backdrop-blur-xl bg-gradient-to-br from-[#0C2C47]/60 to-[#ABCBCA]/60 dark:bg-gradient-to-br dark:from-[#0C2C47]/60 dark:to-[#ABCBCA]/10 mt-6 px-4 bg-white/60 max-w-fit rounded-3xl fixed top-0 left-1/2 -translate-x-1/2 z-50">
-          <nav className="max-w-6xl rounded-3xl mx-auto flex items-center justify-center p-4">
-            <ul className="flex gap-16 text-lg">
+        <header className="z-1 max-w-full backdrop-blur-xl bg-gradient-to-br from-[#0C2C47]/60 to-[#ABCBCA]/60 dark:bg-gradient-to-br dark:from-[#0C2C47]/60 dark:to-[#ABCBCA]/10 mt-6 bg-white/60 rounded-3xl fixed top-0 left-1/2 -translate-x-1/2 z-50">
+          <nav className="max-w-full rounded-3xl mx-auto flex items-center justify-center p-4">
+            <ul className="flex gap-14 lg:text-lg sm:text-md">
               <li>
                 <a
                   href="#about"
@@ -59,7 +59,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mt-30 w-full backdrop-blur-xl bg-white/10 dark:bg-white/5 border border-white/20 rounded-3xl p-10 shadow-2xl flex flex-col items-center"
+          className="mt-30 max-w-full mx-4 sm:mx-6 lg:max-w-3xl lg:mx-auto backdrop-blur-xl bg-white/10 dark:bg-white/5 border border-white/20 rounded-3xl p-10 shadow-2xl flex flex-col items-center"
         >
           <motion.div
             initial={{ scale: 0 }}
@@ -95,7 +95,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="scroll-mt-30 mt-16 backdrop-blur-xl bg-white/10 dark:bg-white/5 border border-white/20 p-8 rounded-2xl shadow-xl"
+          className="mt-16 scroll-mt-30 mx-4 sm:mx-6 lg:max-w-3xl lg:mx-auto backdrop-blur-xl bg-white/10 dark:bg-white/5 border border-white/20 p-8 rounded-2xl shadow-xl"
         >
           <h2 className="text-center text-3xl font-semibold text-[#0C2C47] dark:text-white transition duration-300 hover:scale-[1.1]">
             About Me
@@ -116,7 +116,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="scroll-mt-30 mt-16 backdrop-blur-xl bg-white/10 dark:bg-white/5 border border-white/20 p-8 rounded-2xl shadow-xl"
+          className="mx-4 sm:mx-6 lg:max-w-3xl lg:mx-auto scroll-mt-30 mt-16 backdrop-blur-xl bg-white/10 dark:bg-white/5 border border-white/20 p-8 rounded-2xl shadow-xl"
         >
           <h2 className="text-center text-3xl font-semibold text-[#0C2C47] dark:text-white transition duration-300 hover:scale-[1.1]">
             Skills
@@ -175,7 +175,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="scroll-mt-30 mt-16"
+          className="mx-4 sm:mx-6 lg:max-w-3xl lg:mx-auto scroll-mt-30 mt-16"
         >
           <h2 className="text-center text-3xl font-semibold text-[#0C2C47] dark:text-white transition duration-300 hover:scale-[1.1]">
             Projects
@@ -248,7 +248,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="scroll-mt-30 mt-20 p-8 rounded-2xl text-center"
+          className="sm:mx-6 lg:max-w-4xl lg:mx-auto scroll-mt-30 mt-20 p-8 rounded-2xl text-center"
         >
           <div className="flex items-center gap-3 mb-8 justify-center">
             <h2 className="text-center text-center text-3xl font-bold text-gray-800 dark:text-white transition duration-300 hover:scale-[1.1]">
